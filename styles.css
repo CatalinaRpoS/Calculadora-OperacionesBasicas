@@ -1,0 +1,21 @@
+body, .card{
+    background-color: #F3EFEE;
+}
+.navbar, .footer{
+    background-color: #957DAD;
+}
+.operacion{
+    background-color: #E0BBE4;
+}
+.result{
+    height: 37px;
+    padding: .375rem .75rem;
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    color: #495057;
+}
+#imagen{
+    max-height: 200px;
+}
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora | Operaciones Básicas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="operaciones.js"></script>
+    <link  rel="icon" href="Images/icono.png" />
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand"><img src="Images/icono.png" width="70" height="70" class="d-inline-block align-top" alt="Icono" loading="lazy"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active font-weight-bold" href="#instrucciones">Instrucciones<span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active font-weight-bold" href="#calculadora">Calculadora</a>
+                <a class="nav-item nav-link active font-weight-bold" href="#autor">Acerca del Autor</a>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+    <section>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images/matematicas2.jpg" class="d-block w-100" style="max-height: 350px;"alt="Club-de-lectura" >
+              </div>
+            </div>
+    </section>
+    <br/>
+        <section class="container" id="instrucciones">
+                  <h2>Instrucciones</h2>
+                  <p>Esta calculadora de operaciones básicas es sencilla y fácil de utilizar. Podrás sumar, restar, multiplicar y dividir el par de números que quieras, ¡incluso decimales! Para obtener los resultados que necesitas, te sugiero que sigas las siguientes instrucciones:
+                    <ul>
+                        <li>Si quieres obtener una suma, debes hacer click una vez en el botón correspondiente.</li>
+                        <li>Si quieres obtener una resta, debes hacer click dos veces en el botón correspondiente.</li>
+                        <li>Si quieres obtener una multiplicación, debes poner el mouse sobre el botón correspondiente.</li>
+                        <li>Si quieres obtener una división, debes mover el mouse dentro del botón correspondiente.</li>
+                    </ul></p>
+       </section>
+       <br/>
+        <section class="container" id="calculadora">
+            <div class="card mb-3" style="max-width: 1500px;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="Images/instrucciones.jpg" class="card-img" alt="Instrucciones">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h2 class="card-title">Calculadora de Operaciones Básicas</h2>
+                      <p class="card-text"><form>
+                        <div class="row">
+                        <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                            <label >Primer Número</label>
+                            <input type="text" class="form-control" id="num1">
+                            </div>
+                            <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <label>Segundo Número</label>
+                                <input type="text" class="form-control" id="num2">
+                              </div>
+                            <div class="form-group col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                                <label>Resultado</label>
+                                <p class="result"><output id="result"></output></p>
+                              </div>  
+                            </div>
+                            <button type="button" class="btn operacion" onclick="sumar()">Sumar</button>
+                            <button type="button" class="btn operacion" ondblclick="restar()">Restar</button>
+                            <button type="button" class="btn operacion" onmouseenter="multiplicar()">Multiplicar</button>
+                            <button type="button" class="btn operacion" onmousemove="dividir()">Dividir</button>
+                        </div>
+                    </form></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </section>
+    <br/>
+    </main>
+
+    <footer class="footer" id="autor">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                    <br/>
+                    <p class="font-weight-bold">Catalina Restrepo Salgado | 2020</p>
+                    <p class="font-weight-bold">Institución Educativa Diego Echavarría Misas</p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                  <br/>
+                  <p class="font-weight-bold">Taller de Programación</p>
+                  <p class="font-weight-bold">Media Técnica en Desarrollo de Software</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
